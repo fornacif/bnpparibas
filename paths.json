@@ -1,0 +1,11 @@
+{
+  "mappings": [
+    "/content/bnpparibas/:/",
+    "/content/bnpparibas/configuration:/.helix/config.json",
+    "/content/bnpparibas/redirects:/redirects.json"
+  ],
+  "includes": [
+    "/content/bnpparibas",
+    "/content/dam/bnpparibas/images/"
+  ]
+}

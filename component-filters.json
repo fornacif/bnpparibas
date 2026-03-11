@@ -1,0 +1,65 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "3d-viewer",
+      "articles",
+      "columns",
+      "dropbox-media",
+      "faq",
+      "heading",
+      "hero",
+      "login-modal",
+      "menu",
+      "page-list",
+      "portfolio",
+      "products",
+      "search",
+      "services",
+      "teaser",
+      "video"
+    ]
+  },
+  {
+    "id": "menu",
+    "components": [
+      "menu-item"
+    ]
+  },
+  {
+    "id": "services",
+    "components": [
+      "service-item"
+    ]
+  },
+  {
+    "id": "faq",
+    "components": [
+      "faq-item"
+    ]
+  },
+  {
+    "id": "portfolio",
+    "components": [
+      "portfolio-item"
+    ]
+  }
+]

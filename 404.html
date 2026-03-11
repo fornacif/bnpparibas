@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page not found</title>
+  <script type="text/javascript">
+    window.isErrorPage = true;
+    window.errorCode = '404';
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Page not found">
+  <script src="/scripts/scripts.js" type="module" crossorigin="use-credentials"></script>
+  <script type="module">
+    window.addEventListener('load', () => {
+      if (document.referrer) {
+        const { origin, pathname } = new URL(document.referrer);
+        if (origin === window.location.origin) {
+          const backBtn = document.createElement('a');
+          backBtn.className = 'px-6 py-3 bg-white text-brand-600 border-2 border-brand-600 rounded-lg hover:bg-brand-50 transition font-semibold';
+          backBtn.href = pathname;
+          backBtn.textContent = 'Go back';
+          backBtn.title = 'Go back';
+          const btnContainer = document.querySelector('.button-container');
+          btnContainer.append(backBtn);
+        }
+      }
+    });
+  </script>
+  <script type="module">
+    import { sampleRUM } from '/scripts/aem.js';
+    sampleRUM('404', { source: document.referrer });
+  </script>
+
+  <link rel="stylesheet" href="/styles/tailwind-output.css"/>
+</head>
+
+<body class="bg-gray-50">
+  <header></header>
+  <main class="min-h-screen flex items-center justify-center px-6 md:px-8 pb-8">
+    <div class="max-w-4xl w-full text-center">
+      <!-- Error Code -->
+      <div class="mb-8">
+        <h1 class="text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold text-brand-600 tracking-tight leading-none">404</h1>
+      </div>
+
+      <!-- Error Message -->
+      <div class="mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Page Not Found</h2>
+        <p class="text-lg text-gray-600 max-w-md mx-auto">
+          Sorry, we couldn't find the page you're looking for.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="button-container flex flex-wrap gap-4 justify-center items-center">
+        <a href="/" class="px-8 py-3 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          Go Home
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
